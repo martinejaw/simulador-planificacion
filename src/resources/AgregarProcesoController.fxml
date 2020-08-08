@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="513.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AgregarProceso">
+   <children>
+      <Label layoutX="96.0" prefHeight="68.0" prefWidth="202.0" text="PROCESO">
+         <font>
+            <Font name="Bodoni MT" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="58.0" prefHeight="26.0" prefWidth="144.0" text="TAMAÑO PROCESO" />
+      <Label layoutX="50.0" layoutY="98.0" prefHeight="26.0" prefWidth="144.0" text="TIEMPO DE ARRIBO" />
+      <TextField fx:id="tamañoProcesoInput" layoutX="207.0" layoutY="58.0" prefHeight="26.0" prefWidth="135.0" />
+      <TextField fx:id="tiempoArriboInput" layoutX="207.0" layoutY="98.0" prefHeight="26.0" prefWidth="135.0" />
+      <Line endX="208.20001220703125" layoutX="143.0" layoutY="185.0" startX="-100.0" />
+      <RadioButton fx:id="unaEntSalRadioButton" layoutX="168.0" layoutY="215.0" mnemonicParsing="false" onAction="#radioButtonChoose" prefHeight="34.0" prefWidth="78.0" text="1 E/S" />
+      <RadioButton fx:id="sinEntSalRadioButton" layoutX="52.0" layoutY="216.0" mnemonicParsing="false" onAction="#radioButtonChoose" prefHeight="34.0" prefWidth="77.0" text="SIN E/S" />
+      <Button fx:id="agregarProcesoButton" layoutX="36.0" layoutY="463.0" mnemonicParsing="false" onAction="#agregarProceso" prefHeight="26.0" prefWidth="314.0" text="AGREGAR PROCESO" />
+      <Label fx:id="prioridadLabel" layoutX="52.0" layoutY="139.0" prefHeight="26.0" prefWidth="144.0" text="PRIORIDAD" />
+      <Label layoutX="63.0" layoutY="275.0" prefHeight="26.0" prefWidth="144.0" text="CPU" />
+      <TextField fx:id="cpu0Input" layoutX="208.0" layoutY="275.0" prefHeight="26.0" prefWidth="135.0" />
+      <Label layoutX="64.0" layoutY="310.0" prefHeight="26.0" prefWidth="144.0" text="E/S" />
+      <TextField fx:id="entSalInput1" layoutX="209.0" layoutY="310.0" prefHeight="26.0" prefWidth="135.0" />
+      <Label layoutX="65.0" layoutY="347.0" prefHeight="26.0" prefWidth="144.0" text="CPU" />
+      <TextField fx:id="cpu1Input" layoutX="210.0" layoutY="347.0" prefHeight="26.0" prefWidth="135.0" />
+      <Label layoutX="65.0" layoutY="384.0" prefHeight="26.0" prefWidth="144.0" text="E/S" />
+      <TextField fx:id="entSalInput2" layoutX="210.0" layoutY="384.0" prefHeight="26.0" prefWidth="135.0" />
+      <Label layoutX="65.0" layoutY="421.0" prefHeight="26.0" prefWidth="144.0" text="CPU" />
+      <TextField fx:id="cpu2Input" layoutX="210.0" layoutY="421.0" prefHeight="26.0" prefWidth="135.0" />
+      <RadioButton fx:id="dosEntSalRadioButton" layoutX="265.0" layoutY="215.0" mnemonicParsing="false" onAction="#radioButtonChoose" prefHeight="34.0" prefWidth="78.0" text="2 E/S" />
+      <Spinner fx:id="prioridadSpinner" layoutX="208.0" layoutY="140.0" prefHeight="25.0" prefWidth="135.0" />
+   </children>
+</AnchorPane>

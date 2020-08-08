@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vboxContainer" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Home">
+   <children>
+      <GridPane prefHeight="44.0" prefWidth="572.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="78.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="410.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.40002441406256" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="56.00001525878906" minHeight="10.0" prefHeight="24.799993896484374" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="414.0" text="SIMULADOR" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Nirmala UI Bold" size="36.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="15.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane prefHeight="46.0" prefWidth="600.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.199951171875" minWidth="10.0" prefWidth="29.39996337890625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.2000366210938" minWidth="10.0" prefWidth="258.2000366210938" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.5999755859375" minWidth="9.000015258789062" prefWidth="11.400039672851562" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.39996337890625" minWidth="10.0" prefWidth="250.99993896484375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.40002441406256" minWidth="10.0" prefWidth="21.600061035156273" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="17.4" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.00001525878906" minHeight="10.0" prefHeight="24.799993896484374" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <RadioButton fx:id="sinColasMultiRadioButton" mnemonicParsing="false" onAction="#chooseSinColas" text="Sin Colas Multinivel" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="115.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="conColasMultiRadioButton" mnemonicParsing="false" onAction="#chooseConColas" text="Con Colas Multinivel" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </GridPane>
+      <GridPane prefHeight="78.0" prefWidth="570.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.199951171875" minWidth="10.0" prefWidth="53.39994735717774" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.3999877929688" minWidth="10.0" prefWidth="310.3999877929688" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.5999755859375" minWidth="10.0" prefWidth="96.80001220703127" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.39996337890625" minWidth="10.0" prefWidth="50.200000000000045" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.40002441406256" minWidth="10.0" prefWidth="60.60000000000002" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="17.4" minHeight="5.199975228309633" prefHeight="15.600015258789062" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.00001525878906" minHeight="10.0" prefHeight="19.799985885620117" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.00001525878906" minHeight="10.0" prefHeight="20.60001411437988" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="236.0" text="ALGORITMO DE PLANIFICACION" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="quantumLabel" prefHeight="18.0" prefWidth="92.0" text="QUANTUM" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <ChoiceBox fx:id="algoritmoPlanificacionChoicebox" onTouchReleased="#displayDropdownAlgoritmoPlanificacion" opacity="0.88" prefHeight="26.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></ChoiceBox>
+            <ChoiceBox fx:id="quantumChoicebox" opacity="0.88" prefHeight="26.0" prefWidth="215.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane prefHeight="78.0" prefWidth="570.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.199951171875" minWidth="10.0" prefWidth="39.599996185302736" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.3999877929688" minWidth="10.0" prefWidth="258.3999877929688" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.00001220703126" minWidth="10.0" prefWidth="241.60001220703123" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.40002441406256" minWidth="10.0" prefWidth="28.599987792968818" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="17.4" minHeight="5.199975228309633" prefHeight="15.600015258789062" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.00001525878906" minHeight="10.0" prefHeight="19.799985885620117" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.00001525878906" minHeight="10.0" prefHeight="20.60001411437988" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="236.0" text="TIPO DE PARTICION" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="267.0" text="ALGORITMO PLANIFICACIÓN MEMORIA" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ChoiceBox fx:id="tipoDeParticionChoicebox" opacity="0.88" prefHeight="26.0" prefWidth="226.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </ChoiceBox>
+            <Line endX="418.78570556640625" endY="3.635883331298828E-6" startX="-100.0" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="algoritmoPlanificacionMemoriaChoiceBox" opacity="0.88" prefHeight="26.0" prefWidth="228.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ChoiceBox>
+         </children>
+      </GridPane>
+      <AnchorPane prefHeight="84.0" prefWidth="570.0">
+         <children>
+            <Spinner fx:id="cantidadParticionesSpinner" layoutX="273.0" layoutY="32.0" prefHeight="26.0" prefWidth="62.0" />
+            <Label fx:id="cantidadParticionesLabel" layoutX="52.0" layoutY="30.0" prefHeight="31.0" prefWidth="201.0" text="CANTIDAD DE PARTICIONES" />
+            <Spinner fx:id="tamañoParaSOSpinner" layoutX="398.0" layoutY="33.0" />
+            <Label fx:id="tamañoParaSOLabel" layoutX="398.0" layoutY="4.0" prefHeight="30.0" prefWidth="158.0" text="TAMAÑO PARA S.O." />
+            <Label fx:id="tamañoMemoriaLabel" layoutX="91.0" layoutY="15.0" prefHeight="26.0" prefWidth="210.0" text="TAMAÑO MEMORIA" visible="false" />
+            <Label fx:id="porcentajeSOLabel" layoutX="367.0" layoutY="13.0" prefHeight="30.0" prefWidth="174.0" text="PORCENTAJE PARA SO" visible="false" />
+            <TextField fx:id="tamañoMemoriaInput" layoutX="91.0" layoutY="44.0" prefHeight="26.0" prefWidth="226.0" visible="false" />
+            <TextField fx:id="porcentajeSOInput" layoutX="367.0" layoutY="43.0" prefHeight="26.0" prefWidth="202.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="54.0" prefWidth="570.0">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="250.0" layoutY="18.0" prefHeight="31.0" prefWidth="236.0" text="TAMAÑO DE PARTICIONES" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <GridPane prefHeight="58.0" prefWidth="571.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.199951171875" minWidth="10.0" prefWidth="81.79998779296875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.3999877929688" minWidth="10.0" prefWidth="35.999975585937506" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.3999877929688" minWidth="0.0" prefWidth="33.60002441406249" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.3999877929688" minWidth="0.0" prefWidth="34.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.1999877929688" minWidth="10.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.1999877929688" minWidth="8.20001220703125" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.999951171875" minWidth="10.0" prefWidth="32.80003967285154" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.80001220703127" minWidth="10.0" prefWidth="39.19999999999999" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.5999877929687" minWidth="10.0" prefWidth="35.19999999999999" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.5999877929687" minWidth="10.0" prefWidth="32.60002441406249" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.5999877929687" minWidth="10.0" prefWidth="45.40001220703124" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.5999877929687" minWidth="10.0" prefWidth="38.99998779296874" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.5999877929687" minWidth="10.0" prefWidth="96.60000000000002" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="35.200035667419435" minHeight="5.199975228309633" prefHeight="27.20001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.00001525878906" minHeight="10.0" prefHeight="31.19998779296875" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="particionUno" prefHeight="26.0" prefWidth="43.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="particionDos" prefHeight="13.0" prefWidth="48.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="particionTres" prefHeight="13.0" prefWidth="48.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="particionCuatro" prefHeight="13.0" prefWidth="48.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <TextField fx:id="particionCinco" prefHeight="13.0" prefWidth="48.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <TextField fx:id="particionSeis" prefHeight="13.0" prefWidth="48.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+            <Label text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label text="2" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+            <Label text="3" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+            <Label text="4" GridPane.columnIndex="7" GridPane.halignment="CENTER" />
+            <Label text="5" GridPane.columnIndex="9" GridPane.halignment="CENTER" />
+            <Label text="6" GridPane.columnIndex="11" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+      <Button fx:id="siguiente" mnemonicParsing="false" onAction="#goToProcessTable" prefHeight="29.0" prefWidth="345.0" text="SIGUIENTE">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SimulacionOpciones">
+   <children>
+      <Button fx:id="ganttButton" layoutX="70.0" layoutY="51.0" mnemonicParsing="false" onAction="#openGanttWindow" prefHeight="56.0" prefWidth="214.0" text="Gantt" />
+      <Button fx:id="estadisticaProcesosButton" layoutX="70.0" layoutY="239.0" mnemonicParsing="false" onAction="#openEstadisticaProcesos" prefHeight="56.0" prefWidth="214.0" text="Estadistica de Procesos" />
+      <Button fx:id="mapaMemoriaButton" layoutX="70.0" layoutY="146.0" mnemonicParsing="false" onAction="#openMapaMemoriaWindow" prefHeight="56.0" prefWidth="214.0" text="Mapa de Memoria" />
+      <Button fx:id="atrasButton" layoutX="123.0" layoutY="337.0" mnemonicParsing="false" onAction="#atras" prefHeight="38.0" prefWidth="109.0" text="ATRAS" />
+   </children>
+</AnchorPane>
